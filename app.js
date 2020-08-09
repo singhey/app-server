@@ -25,22 +25,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', (req, res, next) => {
   let baseUrl = "https://dreamgaming.in/skywinner/ansKJ873jhj7shd/"
-  // console.log(req.url, req.query, req.body)
-  // if(req.url === "/get_user_profile/?access_key=1111prince1111&id=642965&username=singhey&token=youdontknow") {
-  //   console.log("Got request to return user data. sending modified")
-  //   return res.send({ result:
-  //     [ { fname: 'Abhishek',
-  //         lname: 'Singh',
-  //         user_profile: null,
-  //         gender: '',
-  //         dob: '',
-  //         state: '',
-  //         cur_balance: '150',
-  //         won_balance: '100',
-  //         bonus_balance: '0',
-  //         status: '1',
-  //         success: '1' } ] })
-  // }
+  console.log(req.url, req.query, req.body)
+  if(req.url === "/get_user_profile/?access_key=1111prince1111&id=644472&username=dreamgaming19&token=12345678") {
+    console.log("Got request to return user data. sending modified")
+    // return res.send({ result:
+    //   [ { fname: 'dream',
+    //       lname: 'gaming',
+    //       user_profile: null,
+    //       gender: '',
+    //       dob: '',
+    //       state: '',
+    //       cur_balance: '150',
+    //       won_balance: '100',
+    //       bonus_balance: '0',
+    //       status: '1',
+    //       success: '1' } ] })
+  }
   axios({
     method: req.method,
     url: `${baseUrl}${req.url}`,
